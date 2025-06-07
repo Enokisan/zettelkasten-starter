@@ -1,7 +1,7 @@
 {
   "name": "zettelkasten-starter",
   "version": "1.0.0",
-  "description": "Zettelkasten-Starter is an ultimately simple library for a zettelkasten beginner",
+  "description": "An ultimately simple CLI tool and library for zettelkasten beginners",
   "main": "index.js",
   "bin": {
     "create-zettelkasten": "bin/create-zettelkasten.js"
