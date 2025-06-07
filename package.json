@@ -1,6 +1,6 @@
 {
   "name": "zettelkasten-starter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An ultimately simple CLI tool and library for zettelkasten beginners",
   "main": "index.js",
   "bin": {
