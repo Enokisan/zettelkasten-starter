@@ -1,55 +1,135 @@
-# 私のZettelkasten
+# Zettelkasten Starter
 
-Zettelkastenメソッドを使った知識管理システムへようこそ!
+An ultimately simple CLI tool and library for Zettelkasten beginners.
 
-## 📁 ディレクトリ構造
+## 📦 Installation
 
-このプロジェクトは4つの基本的なノートタイプで構成されています:
+### Global Installation (Recommended)
 
-### 01_FleetingNote（フリーティングノート）
+```bash
+npm install -g zettelkasten-starter
+```
 
-- 瞬間的なアイデアや思いつき
-- 後で整理するための一時的なメモ
-- 短時間で記録する簡潔なノート
+### Local Installation
 
-### 02_LiteratureNote（文献ノート）
+```bash
+npm install zettelkasten-starter
+```
 
-- 本、記事、動画などの内容要約
-- 引用や参考文献の記録
-- 自分の言葉での解釈や感想
+## 🚀 Usage
 
-### 03_PermanentNote（パーマネントノート）
+### As CLI Tool
 
-- 完全に自分の言葉で表現された知識
-- 他のノートと関連付けられた洞察
-- 長期的に価値のある知見
+```bash
+# Interactive mode
+create-zettelkasten
 
-### 04_StructureNote（構造ノート）
+# Specify project name directly
+create-zettelkasten my-notes
 
-- テーマやトピックの概要
-- 関連するノートへのインデックス
-- 知識の地図やナビゲーション
+# Create project in Japanese
+create-zettelkasten my-notes --lang ja
 
-## 💡 使い方のコツ
+# Create project in English
+create-zettelkasten my-notes --lang en
+```
 
-1. **小さく始める**: まずはFleetingNoteに思いついたことを書く
-2. **定期的な整理**: FleetingNoteを他のノートタイプに昇格させる
-3. **リンクを作る**: `[[ノート名]]`で他のノートと関連付ける
-4. **継続が重要**: 毎日少しずつでも続ける
+### As Library
 
-## 📝 ファイル命名規則
+```javascript
+const { createZettelkasten } = require('zettelkasten-starter');
 
-- 日付ベース: `YYYY-MM-DD_タイトル.md`
-- ID ベース: `001_タイトル.md`
-- 自由形式: `意味のあるタイトル.md`
+// Basic usage
+await createZettelkasten('./my-zettelkasten');
 
-あなたに合った方法を選んでください！
+// Specify language
+await createZettelkasten('./my-zettelkasten', 'ja');
+await createZettelkasten('./my-zettelkasten', 'en');
+```
 
-## 🚀 さあ、始めましょう！
+## 📁 Generated Directory Structure
 
-各ディレクトリにサンプルファイルが用意されています。
-それらを参考に、あなた独自のZettelkastenを構築していってください。
+When you create a project, the following structure is generated:
+
+```
+my-zettelkasten/
+├── 01_FleetingNote/          # Fleeting notes
+│   └── sample-fleeting.md
+├── 02_LiteratureNote/        # Literature notes
+│   └── sample-literature.md
+├── 03_PermanentNote/         # Permanent notes
+│   └── sample-permanent.md
+├── 04_StructureNote/         # Structure notes
+│   └── sample-structure.md
+└── README.md                 # Usage guide
+```
+
+## 🎯 Key Features
+
+- **4 Note Types**: Classification based on the Zettelkasten method
+- **Sample Files**: Usage examples for each note type
+- **Multi-language Support**: Japanese and English supported
+- **CLI/Library Support**: Use from command line or programmatically
+
+## 📝 API Reference
+
+### `createZettelkasten(targetPath, language)`
+
+#### Parameters
+
+- `targetPath` (string): Directory path where the project will be created
+- `language` (string, optional): Generation language. `'ja'` or `'en'` (default: `'en'`)
+
+#### Returns
+
+- `Promise<void>`: Promise indicating project creation completion
+
+#### Examples
+
+```javascript
+const { createZettelkasten } = require('zettelkasten-starter');
+
+// Create Japanese project
+await createZettelkasten('./knowledge-base', 'ja');
+
+// Create English project
+await createZettelkasten('./knowledge-base', 'en');
+```
+
+## ⚙️ Requirements
+
+- Node.js >= 14.0.0
+
+## 🛠️ Development
+
+```bash
+# Clone repository
+git clone https://github.com/Enokisan/zettelkasten-starter.git
+cd zettelkasten-starter
+
+# Install dependencies
+npm install
+
+# Run tests
+npm test
+
+# Check coverage
+npm run test:coverage
+```
+
+## 📄 License
+
+MIT
+
+## 🤝 Contributing
+
+Issues and pull requests are always welcome!
+
+## 📚 Related Links
+
+- [GitHub Repository](https://github.com/Enokisan/zettelkasten-starter)
+- [Issues](https://github.com/Enokisan/zettelkasten-starter/issues)
 
 ---
 
-**Happy Note-Taking! 📚✨**
+**Start efficient knowledge management with Zettelkasten!** 🚀
