@@ -134,3 +134,8 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Test directories and outputs
+__tests__/*/test-output/
+__tests__/*/cli-test-output/
+__tests__/*/integration-test-output/

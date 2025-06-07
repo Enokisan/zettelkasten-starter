@@ -7,7 +7,9 @@
     "create-zettelkasten": "./bin/create-zettelkasten.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "keywords": [
     "zettelkasten",
@@ -31,7 +33,25 @@
     "commander": "^9.5.0",
     "fs-extra": "^11.2.0"
   },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "@types/jest": "^29.5.5"
+  },
   "engines": {
     "node": ">=14.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "lib/**/*.js",
+      "bin/**/*.js",
+      "!node_modules/**"
+    ],
+    "coverageDirectory": "coverage",
+    "coverageReporters": [
+      "text",
+      "lcov",
+      "html"
+    ]
   }
 } 
