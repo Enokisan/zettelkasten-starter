@@ -1,0 +1,37 @@
+{
+  "name": "zettelkasten-starter",
+  "version": "1.0.0",
+  "description": "Zettelkasten-Starter is an ultimately simple library for a zettelkasten beginner",
+  "main": "index.js",
+  "bin": {
+    "create-zettelkasten": "./bin/create-zettelkasten.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "zettelkasten",
+    "note-taking",
+    "knowledge-management",
+    "pkm",
+    "markdown",
+    "cli"
+  ],
+  "author": "ENO",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Enokisan/zettelkasten-starter.git"
+  },
+  "homepage": "https://github.com/Enokisan/zettelkasten-starter#readme",
+  "bugs": {
+    "url": "https://github.com/Enokisan/zettelkasten-starter/issues"
+  },
+  "dependencies": {
+    "commander": "^9.5.0",
+    "fs-extra": "^11.2.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+} 
